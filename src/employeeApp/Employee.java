@@ -2,17 +2,18 @@ package employeeApp;
 
 public class Employee {
 
-    public static int maxId = 0;
+    public static int maxId = 0; // static means this can be shared with all Employee objects
 
     private int id;
     private String fname;
     private String lname;
     private double salary; // float
     private boolean has401K;
-    private int companyId;
-    private int healthPlanId;
+    private int companyId; // foreign key
+    private int healthPlanId; // foreign key
 
-    // constructor - doesn't need a data type, has to match class name
+    // constructor - the constructor is the initial state of the object
+    // doesn't need a data type, has to match class name
     public Employee(String fname, String lname, double salary, boolean has401K, int companyId, int healthPlanId) {
         maxId++;
 
